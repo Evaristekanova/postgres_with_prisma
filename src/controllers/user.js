@@ -20,6 +20,7 @@ const addUser = async (req, res) => {
     console.log(error);
   }
 };
+
 const updateUser = async (req, res) => {
   const { id } = req.params;
   console.log(id, 'id here');

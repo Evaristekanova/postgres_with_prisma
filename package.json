@@ -11,8 +11,8 @@
     "deploy": "prisma migrate deploy --schema ./src/prisma/schema.prisma"
   },
   "prisma": {
-  "schema": ".src/prisma/schema.prisma"
-},
+    "schema": ".src/prisma/schema.prisma"
+  },
   "keywords": [],
   "author": "",
   "description": "",
@@ -23,6 +23,7 @@
     "mysql2": "^3.3.5",
     "nodemon": "^2.0.22",
     "postgres": "^3.3.5",
-    "prisma": "^4.15.0"
+    "prisma": "^4.15.0",
+    "uuid": "^9.0.0"
   }
 }

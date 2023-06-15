@@ -8,9 +8,21 @@ datasource db {
 }
 
 model User {
-    id        Int      @id @default(autoincrement())
+    id        Int @id @default(autoincrement())
     email     String   @unique
     name      String?
+    houseOwned House[]  @relation("houseOwner")
+    houseBuilt House[]  @relation("houseBuiltBy")
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
+}
+
+model House {
+    id Int @id @default(autoincrement())
+    address String @unique
+    wifipassword String?
+    owner User @relation("houseOwner", fields: [ownerId], references: [id])
+    ownerId Int
+    builtBy User @relation("houseBuiltBy", fields: [builtById], references: [id])
+    builtById Int
 }
